@@ -1,0 +1,10 @@
+npm install express
+npm install body-parser
+npm install mysql
+npm install ejs
+
+1 = voiture
+2 = berline
+3 = van
+
+cd /mnt/c/Users/Etienne/Google\ Drive/TP/Semestre\ 6/PW6/DM/

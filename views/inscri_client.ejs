@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+  </head>
+  <body>
+    <h1>Inscription en tant que client :</h1>
+    <h2>Formulaire :</h2>
+    <p><%= err %></p>
+    <form method="post" action="/inscription/client">
+    <p> Nom : </p><input type="text" name="nom" maxlength="40" value="<%= nom %>" minlength="1"/>
+    <p> Prénom : </p><input type="text" name="prenom" maxlength="40" value="<%= prenom %>" minlength="1"/>
+    <p> Date de naissance :</p> <input type="date" name="aujourd" max="<%= date %>" value="<%= date_v %>"/>
+    <p> Pseudo : </p><input type="text" name="pseudo" maxlength="15" value="<%= pseudo %>" minlength="1"/>
+    <p> MDP : </p><input type="password" name="mdp" maxlength="15" minlength="5"/>
+    <p> Confirmer le MDP : </p><input type="password" name="cMDP" maxlength="15" minlength="5"/>
+    <br><br>
+    <button type="submit">Continue</button>
+    </form>
+  </body>
+</html>

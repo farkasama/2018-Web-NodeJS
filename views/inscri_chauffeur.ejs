@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+  </head>
+  <body>
+    <h1>Inscription en tant que chauffeur :</h1>
+    <h2>Formulaire :</h2>
+    <p><%= err %></p>
+    <form method="post" action="/inscription/chauffeur">
+    <p> Nom : </p><input type="text" name="nom" maxlength="40" value="<%= nom %>" minlength="1"/>
+    <p> Prénom : </p><input type="text" name="prenom" maxlength="40" value="<%= prenom %>" minlength="1"/>
+    <p> Date de naissance :</p> <input type="date" name="aujourd" max="<%= date %>" value="<%= date_v %>"/>
+    <p> Pseudo : </p><input type="text" name="pseudo" maxlength="15" value="<%= pseudo %>" minlength="5"/>
+    <p> MDP : </p><input type="password" name="mdp" maxlength="15" minlength="5"/>
+    <p> Confirmer le MDP : </p><input type="password" name="cMDP" maxlength="15" minlength="5"/>
+    <p>Type de voiture : </p>
+    <input type="radio" id="voiture" name="voiture" value="1">
+    <label for="voiture">Voiture</label>
+    <input type="radio" id="berline" name="voiture" value="2">
+    <label for="berline">Berline</label>
+    <input type="radio" id="van" name="voiture" value="3">
+    <label for="van">Van</label>
+    <br><br>
+    <button type="submit">Continue</button>
+    </form>
+  </body>
+</html>

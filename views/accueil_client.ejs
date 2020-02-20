@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accueil</title>
+    </head>
+    <body>
+        <p>Bonjour <%= prenom %> <%= nom %></p>
+        <form method="POST" action="/client/profile">
+            <input type="hidden" name="id" value="<%= id %>">
+            <button type="submit">Modifier son profil</button>
+        </form>
+        <h2>Voulez vous faire une course ?</h2>
+        <form method="POST" action="/client/course">
+            <input type="hidden" name="id" value="<%= id %>">
+            <input type="hidden" name="creation" value="true">
+            <h4>Départ :</h4>
+            <label for="adresse_d">Adresse : </label>
+            <input list="adresse" id="adresse_d" type="text" name="adresse_d">
+            <br><br>
+            <label for="code_d">Code postal : </label>
+            <input list="code" id="code_d" type="number" name="code" min="01000" max="99999">
+            <br><br>
+            <label for="ville_d">Ville : </label>
+            <input list="ville" id="ville_d" type="ville" name="ville">
+            <h4>Adresse d'arrivée :</h4>
+            <label for="adresse_d">Adresse : </label>
+            <input list="adresse" id="adresse_d" type="text" name="adresse_a">
+            <br><br>
+            <label for="code_d">Code postal : </label>
+            <input list="code" id="code_d" type="number" name="code_a" min="01000" max="99999">
+            <br><br>
+            <label for="ville_d">Ville : </label>
+            <input list="ville" id="ville_d" type="ville" name="ville_a">
+            <br><br>
+            <input type="radio" id="voiture" name="voiture" value="1">
+            <label for="voiture">Voiture</label>
+            <input type="radio" id="berline" name="voiture" value="2">
+            <label for="berline">Berline</label>
+            <input type="radio" id="van" name="voiture" value="3">
+            <label for="van">Van</label>
+            <br><br>
+            <button type="submit">Continue</button>
+        </form>
+    </body>
+</html>

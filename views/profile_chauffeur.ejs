@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Profil</title>
+  </head>
+  <body>
+    <h1>Modification de votre profil :</h1>
+    <h2>Formulaire :</h2>
+    <p><%= err %></p>
+    <p>Modifier uniquement les champs que vous voulez modifier !</p>
+    <form method="post" action="/chauffeur/profile">
+      <input type="hidden" name="id" value="<%= id %>">
+      <p> Nom : </p><input type="text" name="nom" maxlength="40" value="<%= nom %>"/>
+      <p> Prénom : </p><input type="text" name="prenom" maxlength="40" value="<%= prenom %>"/>
+      <p> Date de naissance :</p> <input type="date" name="aujourd" max="<%= date %>" value="<%= date_v %>"/>
+      <p> Pseudo : </p><input type="text" name="pseudo" maxlength="15" value="<%= pseudo %>"/>
+      <p> MDP : </p><input type="password" name="mdp" maxlength="15"/>
+      <p> Confirmer le MDP : </p><input type="password" name="cMDP" maxlength="10"/>
+      <p>Type de voiture : </p>
+      <input type="radio" id="voiture" name="voiture" value="1" <%= v1 %>>
+      <label for="voiture">Voiture</label>
+      <input type="radio" id="berline" name="voiture" value="2" <%= v2 %>>
+      <label for="berline">Berline</label>
+      <input type="radio" id="van" name="voiture" value="3" <%= v3 %>>
+      <label for="van">Van</label>
+      <br><br>
+      <button type="submit">Modifier</button>
+    </form>
+    <br><br>
+    <form method="POST" action="/chauffeur">
+      <input type="hidden" name="id" value="<%= id %>">
+      <button type="submit">Retourner à l'accueil</button>
+    </form>
+  </body>
+</html>

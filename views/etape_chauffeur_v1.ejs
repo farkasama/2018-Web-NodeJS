@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Course</title>
+    </head>
+    <body>
+        <form method="POST" action="/chauffeur/course">
+            <input type="hidden" name="id" value="<%= id %>"/>
+            <input type="hidden" name="edlc" value="2"/>
+            <p>Votre client s'appelle <%= prenom_c %> <%= nom_c %>. Le client va vous rejoindre.</p>
+            <p>Départ : <%= ad %></p>
+            <p>Arrivé : <%= aa%></p>
+            <p>Votre client est monté dans votre voiture ?</p>
+            <input type="submit" value="Cliquez ici">
+        </form>
+    </body>
+</html>

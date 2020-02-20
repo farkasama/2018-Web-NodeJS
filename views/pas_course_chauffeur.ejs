@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Accueil</title>
+    </head>
+    <body>
+        <p>Bonjour <%= prenom %> <%= nom %></p>
+        <form method="POST" action="/chauffeur/profile">
+            <input type="hidden" name="id" value="<%= id %>">
+            <button type="submit">Modifier son profil</button>
+        </form>
+        <form method="POST" action="/chauffeur">
+            <input type="hidden" name="id" value="<%= id %>"/>
+            <p>Vous n'êtes pas actuellement en course.</p>
+            <input type="submit" value="Actualiser la page">
+        </form>
+    </body>
+</html>

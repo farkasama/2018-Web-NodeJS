@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Course</title>
+    </head>
+    <body>
+        <form method="POST" action="/client/course">
+            <input type="hidden" name="id" value="<%= id %>"/>
+            <input type="hidden" name"creation" value="false"/>
+            <p><%= texte %></p>
+            <p>Départ : <%= depart %></p>
+            <p>Arrivé : <%= arrive %></p>
+            <input type="submit" value="Réactualiser la page">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+  </head>
+  <body>
+    <h2>Connexion client :</h2>
+    <p><%= err_client %></p>
+      <form method="post" action="/client">
+        <p> Pseudo : </p><input type="text" name="pseudo" maxlength="15" minlength="5" value="<%= pseudo_cl %>"/>
+        <p> MDP : </p><input type="password" name="mdp" maxlength="15" minlength="5"/>
+        <br><br>
+      <button type="submit">Continue</button>
+      </form>
+    <br><br>
+    <h2>Connexion chauffeur :</h2>
+    <p><%= err_chauffeur %></p>
+      <form method="post" action="/chauffeur">
+        <p> Pseudo : </p><input type="text" name="pseudo" maxlength="15" minlength="5" value="<%= pseudo_ch %>"/>
+        <p> MDP : </p><input type="password" name="mdp" maxlength="15" minlength="5"/>
+        <br><br>
+      <button type="submit">Continue</button>
+      </form>
+    <h2>Pas encore inscrit ?</h2>
+      <p>Si vous n'avez pas encore de compte, l'inscription se passe <a href="/inscription/client">ici pour les clients</a> et <a href="/inscription/chauffeur">ici pour les chauffeur</a> !</p>
+  </body>
+</html>
